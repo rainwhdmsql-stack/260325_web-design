@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* 기본 설정 세팅 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+/* 전체 레이아웃 */
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  /* background-color: rgb(248, 230, 246); */
+}
+/* header */
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  /* background-color: rgb(255, 255, 255); */
+}
+/* logo */
+.logo {
+  width: 18%;
+  height: 100%;
+  padding: 30px 10px;
+  /* background-color: blanchedalmond; */
+}
+.logo img {
+  width: 100%;
+}
+/* menu */
+.menu {
+  position: relative;
+  width: calc(100% - 200px);
+  /* background-color: red; */
+}
+.navi {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  width: 500px;
+  background-color: #fff;
+}
+.navi > li {
+  position: relative;
+  width: calc(100% / 4);
+  text-align: center;
+}
+.navi > li > a {
+  padding: 10px 0;
+}
+.navi > li:hover > a {
+  background-color: rgb(202, 202, 202);
+}
+/* submenu */
+.submenu {
+  position: absolute;
+  top: 43;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  display: none;
+}
+.submenu > li > a {
+  padding: 10px 0;
+}
+.submenu > li:hover > a {
+  background-color: rgb(196, 161, 230);
+}
+/* 메인메뉴 호버시 서브메뉴 보임 */
+.navi > li:hover .submenu {
+  display: block;
+}
+/* main */
+.main {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+/* 이미지 슬라이드 */
+.img-slide {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.img-slide a img {
+  width: 100%;
+}
+.img-slide span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  font-size: 24px;
+}
+/* contents */
+.contents {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  /* background-color: red; */
+}
+/* tabmenu */
+.tabmenu {
+  display: flex;
+  position: relative;
+  width: 400px;
+  height: 100%;
+  background-color: antiquewhite;
+}
+.tabmenu > li {
+  width: 100%;
+  position: absolute;
+}
+.tabmenu > li > a {
+  position: relative;
+  width: 100px;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #fff;
+}
+.tabmenu > li:last-child > a {
+  left: 100px;
+  background-color: aliceblue;
+}
+.tabmenu > li > div {
+  display: none;
+  position: absolute;
+  top: 33;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: aquamarine;
+}
+.tabmenu > li.active > div {
+  display: block;
+}
+/* 공지사항 */
+.notice li:hover {
+  /* display: flex; */
+  font-weight: bold;
+}
+.notice li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.notice li:nth-child(even) a {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* 갤러리 */
+.gallery > ul {
+  display: flex;
+  gap: 5px;
+}
+.gallery > ul > li {
+  width: calc(100% / 3);
+}
+.gallery img {
+  width: 100%;
+}
+/* banner */
+.banner {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  /* background-color: rgb(182, 118, 34); */
+}
+.banner a,
+.shortcut a {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+.banner a img,
+.shortcut a img {
+  width: 100%;
+  height: 100%;
+}
+.banner span,
+.shortcut span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px 20px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+}
+/* shortcut */
+.shortcut {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  /* background-color: rgb(116, 101, 83); */
+}
+/* footer */
+footer {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: #cecece;
+}
+.footer-logo {
+  width: 200px;
+  height: 100%;
+  padding: 30px 10px;
+  background-color: #3a3a3a;
+}
+.footer-logo img {
+  width: 100%;
+}
+/* 하단 메뉴 */
+.bt-menu {
+  text-align: center;
+  width: 1000px;
+  height: 50px;
+  background-color: #eee;
+}
+.btmenu-list {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 50px;
+  background-color: rgb(138, 138, 138);
+}
+.copy {
+  line-height: 50px;
+}
